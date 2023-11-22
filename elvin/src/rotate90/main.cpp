@@ -15,4 +15,5 @@ int main()
     }
 
     imageOut.save("output/pouet.png");
+    imageOut.save("final/rotate90.png");
 }

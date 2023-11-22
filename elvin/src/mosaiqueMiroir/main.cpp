@@ -73,4 +73,5 @@ int main()
     }
 
     imageIncrement.save("output/pouet.png");
+    imageIncrement.save("final/mosaiqueMiroir.png");
 }

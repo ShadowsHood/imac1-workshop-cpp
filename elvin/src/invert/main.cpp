@@ -16,4 +16,5 @@ int main()
     }
 
     image.save("output/pouet.png");
+    image.save("final/invert.png");
 }
