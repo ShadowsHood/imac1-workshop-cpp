@@ -20,4 +20,5 @@ int main()
     }
 
     imageGlitch.save("output/pouet.png");
+    imageGlitch.save("final/split.png");
 }

@@ -16,4 +16,5 @@ int main()
     }
 
     imageOut.save("output/pouet.png");
+    imageOut.save("final/rotateWeird.png");
 }

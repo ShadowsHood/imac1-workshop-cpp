@@ -17,4 +17,5 @@ int main()
     }
 
     image.save("output/pouet.png");
+    image.save("final/virtualiser.png");
 }
