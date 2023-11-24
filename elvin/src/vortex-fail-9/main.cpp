@@ -1,7 +1,7 @@
 #define _USE_MATH_DEFINES
 #include <sil/sil.hpp>
 #include <iostream>
-// #include "random.hpp"
+#include "random.hpp"
 #include <cmath>
 #include <glm/gtx/matrix_transform_2d.hpp>
 
@@ -13,6 +13,7 @@ glm::vec2 rotated(glm::vec2 point, glm::vec2 center_of_rotation, float angle)
 int main()
 {
     float pi {M_PI};
+    set_random_seed(666);
 
     sil::Image image{"images/logo.png"};
     int width {image.width()};
@@ -29,7 +30,7 @@ int main()
         for (int y{0}; y < height; y++)
         {
             int distance_origine {static_cast<int>(sqrt((x-centre.x)*(x-centre.x) + (y-centre.y)*(y-centre.y)))};
-            float angle {distance_origine*pi/50};
+            float angle {distance_origine*pi+random_float(-1.f, 1.f)};
             glm::vec2 new_coord {rotated(glm::vec2{x, y}, centre, angle)};
             new_coord.x = glm::round(new_coord.x);
             new_coord.y = glm::round(new_coord.y);
@@ -40,5 +41,5 @@ int main()
     }
 
     imageOut.save("output/pouet.png");
-    image.save("final/vortex.png");
+    // image.save("final/vortex.png");
 }

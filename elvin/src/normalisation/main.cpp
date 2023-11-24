@@ -1,10 +1,8 @@
-// #define _USE_MATH_DEFINES
-
+#define _USE_MATH_DEFINES
 #include <sil/sil.hpp>
 #include <iostream>
 // #include "random.hpp"
-// #include <cmath>
-#include <complex>
+#include <cmath>
 
                 // Convertir RGB en HSL
                 glm::vec3 rgbToHsl(const glm::vec3& rgb) {
@@ -74,45 +72,71 @@
                     return glm::vec3{r + m, g + m, b + m};
                 }
 
+    float moyenne(float a, float b, float c) {
+        return (a + b + c) / 3.0f;
+    }
+
 int main()
 {
-    sil::Image image{1000/*width*/, 1000/*height*/};
-    // std::complex<float> z{3.f, 2.f}; // Définis le nombre z = 3 + 2*i
-    float width {static_cast<float>(image.width())};
-    float height {static_cast<float>(image.height())};
 
-    float maxIterationsTest {50};
-    float nbInteressantMin {-2.f};
-    float nbInteressantMax {2.f};
-    float plageValues {nbInteressantMax - nbInteressantMin};
+    sil::Image image{"images/photo_faible_contraste.jpg"};
+    int width {image.width()};
+    int height {image.height()};
 
-    for (float x{0}; x < width; x++)
+
+    float brightest_pixel_c { 
+        moyenne(image.pixel(0, 0).r, image.pixel(0, 0).g, image.pixel(0, 0).b)
+    };
+
+    float darkest_pixel_c {
+        moyenne(image.pixel(0, 0).r, image.pixel(0, 0).g, image.pixel(0, 0).b)
+    };
+
+    for (int x{0}; x < width; x++)
     {
-        for (float y{0}; y < height; y++)
+        for (int y{0}; y < height; y++)
         {
-            std::complex<float> c{x * plageValues/width -2, y * plageValues/height -2};
-            std::complex<float> z{0.f};
-            float iterations {0};
-
-            while(iterations < maxIterationsTest) {
-                z = z * z + c;
-                iterations++;
-
-                if (std::abs(z) > 2) {
-                    // image.pixel(x, y) = glm::vec3{iterations/maxIterationsTest};
-                    // image.pixel(x, y).r = iterations/maxIterationsTest;
-                    image.pixel(x, y) = hslToRgb(glm::vec3{x/width, 1.f, iterations/maxIterationsTest});
-                    break;
-                }
-            }
-
-            if (iterations == maxIterationsTest) image.pixel(x, y) = glm::vec3{1.f};
-            
+            float color {moyenne(image.pixel(x, y).r, image.pixel(x, y).g, image.pixel(x, y).b)};
+            if (color > brightest_pixel_c) brightest_pixel_c = color;
+            if (color < darkest_pixel_c) darkest_pixel_c = color;
         }
     }
 
+    float middle_pixel_c {(brightest_pixel_c + darkest_pixel_c)/2};
 
+    float plage_to_lighten {sqrtf((brightest_pixel_c - middle_pixel_c)*(brightest_pixel_c - middle_pixel_c))};
+
+    float plage_to_darken {sqrtf((middle_pixel_c - darkest_pixel_c)*(middle_pixel_c - darkest_pixel_c))};
+
+    for (int x{0}; x < width; x++)
+    {
+        for (int y{0}; y < height; y++)
+        {
+            float color {moyenne(image.pixel(x, y).r, image.pixel(x, y).g, image.pixel(x, y).b)};
+
+            if (color > middle_pixel_c) {
+
+                image.pixel(x, y).r += ((image.pixel(x, y).r - middle_pixel_c)/plage_to_lighten)*(1 - brightest_pixel_c);
+
+                image.pixel(x, y).g += ((image.pixel(x, y).g - middle_pixel_c)/plage_to_lighten)*(1 - brightest_pixel_c);
+
+                image.pixel(x, y).b += ((image.pixel(x, y).b - middle_pixel_c)/plage_to_lighten)*(1 - brightest_pixel_c);
+
+            } else if (color < middle_pixel_c) {
+
+                image.pixel(x, y).r -= ((middle_pixel_c - image.pixel(x, y).r)/plage_to_darken)*(darkest_pixel_c);
+
+                image.pixel(x, y).g -= ((middle_pixel_c - image.pixel(x, y).g)/plage_to_darken)*(darkest_pixel_c);
+
+                image.pixel(x, y).b -= ((middle_pixel_c - image.pixel(x, y).b)/plage_to_darken)*(darkest_pixel_c);
+
+            } else {
+                image.pixel(x, y) = image.pixel(x, y);
+            }
+        }
+    }
+    
 
     image.save("output/pouet.png");
-    image.save("final/fractale.png");
+    image.save("final/normalisation.png");
 }
