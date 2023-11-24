@@ -617,7 +617,7 @@ int main ()
 
 
 
-/* 
+
 #include "random.hpp"
 int main()
 {
@@ -722,7 +722,9 @@ int main()
 
 image.save("output/pouet.png");
 }
-*/
+
+
+
 
 
 
@@ -733,7 +735,7 @@ image.save("output/pouet.png");
 #include "random.hpp"
 int main()
 {
-    sil::Image image{"images/photo.jpg"};
+    sil::Image image{"images/mains.jpg"};
     set_random_seed(1);
     int UnSurNeuf {};
     int UnSurHuit {};
@@ -1431,12 +1433,49 @@ int main()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* 
+#include "random.hpp"
 int main()
 {
-    sil::Image image{"images/maxresdefault.jpg"};
-    sil::Image image2{2334, 1540};
+    sil::Image image{"images/mains.jpg"};
+    sil::Image image2{1500, 1500};
     double total {};
+    set_random_seed(1);
+    int UnSurDeux {};
     // TODO: modifier l'image
+
+   for (int x{0}; x < image.width(); x++)
+    {
+        for (int y{0}; y < image.height(); y++)
+        {   
+            UnSurDeux = random_int(1,3);
+            if (UnSurDeux == 1)
+                { 
+                image.pixel(x,y).r += 0.02;
+                image.pixel(x,y).g += 0.02;
+                image.pixel(x,y).b += 0.02;
+                }
+            if (UnSurDeux == 2)
+                {
+                image.pixel(x,y).r -= 0.02;
+                image.pixel(x,y).g -= 0.02;
+                image.pixel(x,y).b -= 0.02;
+                }
+
+        }
+    }
+
 
     for (int x{0}; x < image.width(); x++)
     {
@@ -1446,11 +1485,12 @@ int main()
             total = (((image.pixel(x,y).r + + image.pixel(x,y).b + image.pixel(x,y).g) / 3));
                 
                 
-                if (total > 0.95)
+             
+                if ((total > 0.95) && (total <= 1))
                     {
-                    image.pixel(x,y).r = 1.f;
-                    image.pixel(x,y).g = 1.f;
-                    image.pixel(x,y).b = 1.f; 
+                    image2.pixel(x,y).r = 1.f;
+                    image2.pixel(x,y).g = 1.f;
+                    image2.pixel(x,y).b = 1.f; 
                     }
 
                 else if ((total > 0.9) && (total <= 0.95))
@@ -1906,7 +1946,16 @@ int main()
                         }
                     }
 
+                       else 
+                    {
+                        image.pixel(x,y).r = 0.f;
+                        image.pixel(x,y).g = 0.f;
+                        image.pixel(x,y).b = 0.f; 
+
+                    }
+
         }
     }
     image2.save("output/pouet.png");
 }
+*/
