@@ -3,6 +3,8 @@
 int main()
 {
     sil::Image image{300/*width*/, 200/*height*/};
+    int width {image.width()};
+    int height {image.height()};
 
     // On passe sur tous les x et tous les y, et on accède au pixel correspondant :
     for (int x{0}; x < image.width(); x++)

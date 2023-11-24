@@ -28,8 +28,7 @@ int main()
     {
         for (int y{0}; y < height; y++)
         {
-            int distance_origine {static_cast<int>(sqrt((x-centre.x)*(x-centre.x) + (y-centre.y)*(y-centre.y)))};
-            float angle {distance_origine*pi/50};
+            float angle {x*y*pi/1000};
             glm::vec2 new_coord {rotated(glm::vec2{x, y}, centre, angle)};
             new_coord.x = glm::round(new_coord.x);
             new_coord.y = glm::round(new_coord.y);
@@ -40,5 +39,5 @@ int main()
     }
 
     imageOut.save("output/pouet.png");
-    image.save("final/vortex.png");
+    // image.save("final/vortex.png");
 }
