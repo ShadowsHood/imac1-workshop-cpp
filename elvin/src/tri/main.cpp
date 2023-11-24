@@ -78,7 +78,7 @@ void tri_horizontal_hue (sil::Image& image, int max_iterations) {
         // HUE
         std::sort(
             image.pixels().begin() + (row_index_to_sort * width), 
-            image.pixels().begin() + (row_index_to_sort * width) + width, 
+            image.pixels().begin() + (row_index_to_sort * width) + random_int(0, width), 
             [](const glm::vec3& color1, const glm::vec3& color2) {
                 if (rgbToHsl(color1).x == rgbToHsl(color2).x) {
                     return rgbToHsl(color1).z < rgbToHsl(color2).z;

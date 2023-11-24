@@ -81,9 +81,8 @@ add_exercise(kmeans)
 add_exercise(kmeans-gpt)
 
 # Crée une cible personnalisée pour exécuter tous les exécutables
-add_custom_target(run_all
-    DEPENDS white vert swap nETb invert degrade miroir miroirDouble bruit rotate90 rotateWeird virtualiser split splitXcropped luminosity disque cercle rosace disqueWeird mosaique mosaiqueMiroir glitch fractale vortex vortex-fail-1 vortex-fail-2 vortex-fail-3 vortex-fail-4 vortex-fail-5 vortex-fail-6 vortex-fail-7 vortex-fail-8 vortex-fail-9 vortex-fail-10 vortex-fail-11 normalisation normalisation-lum
-)
+add_executable(build_all src/dummy.cpp)
 
 # Utilise add_dependencies pour spécifier les dépendances de la cible personnalisée
-add_dependencies(run_all white vert swap nETb invert degrade miroir miroirDouble bruit rotate90 rotateWeird virtualiser split splitXcropped luminosity disque cercle rosace disqueWeird mosaique mosaiqueMiroir glitch fractale vortex vortex-fail-1 vortex-fail-2 vortex-fail-3 vortex-fail-4 vortex-fail-5 vortex-fail-6 vortex-fail-7 vortex-fail-8 vortex-fail-9 vortex-fail-10 vortex-fail-11 normalisation normalisation-lum)
+add_dependencies(build_all white vert swap nETb invert degrade miroir miroirDouble bruit rotate90 rotateWeird virtualiser split splitXcropped luminosity disque cercle rosace disqueWeird mosaique mosaiqueMiroir glitch fractale vortex vortex-fail-1 vortex-fail-2 vortex-fail-3 vortex-fail-4 vortex-fail-5 vortex-fail-6 vortex-fail-7 vortex-fail-8 vortex-fail-9 vortex-fail-10 vortex-fail-11 normalisation normalisation-lum tri tri-double tri-brightness tri-brightness-all tri-brightness-vertical tri-random-brightness tri-hue tri-hue-all tri-random-hue kmeans kmeans-gpt)
+
