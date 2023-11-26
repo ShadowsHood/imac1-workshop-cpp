@@ -1,6 +1,7 @@
 # 🐣 S1 | Prog: Workshop IZACKOVIC Flavien
 
 
+- [🐣 S1 | Prog: Workshop IZACKOVIC Flavien](#-s1--prog-workshop-izackovic-flavien)
   - [ Exercice 1 : Ne garder que le vert ](#-exercice-1--ne-garder-que-le-vert-)
   - [ Exercice 2 : Echanger les canaux ](#-exercice-2--echanger-les-canaux-)
   - [ Exercice 3 : Noir et blanc ](#-exercice-3--noir-et-blanc-)
@@ -122,7 +123,7 @@ Simple après avoir fait le précédent.
 ## <ins> Exercice 13 : Rosace</ins> 
 
 **Résultat**
-![image](./Captures/rosace.png)
+![image](./Captures/Rosace.png)
 
 J'utilise les formules de trigonométrie pour placer les différents centres des cercles. 
 Lors de mes premières tentatives mes pétales se plaçaient dans le coin en bas à gauche. J'ai résolut ce problème une fois avoir compris qu'il ne fallait pas oublier d'écrire les équations des cercles depuis leurs différents centres calculés par rapport au centre de l'image.
