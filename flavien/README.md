@@ -68,7 +68,7 @@ J'ai tout de suite pensé à utiliser une copie de l'image originelle afin d'év
 ## <ins> Exercice 7 : Image bruitée </ins> 
 
 **Résultat 1 : Bruit RGB**
-![image](./Captures/BruitRGB.png)
+![image](./Captures/bruitRGB.png)
 
 Elvin m'avait dit que le bruit ne pouvait être que de trois couleurs donc j'ai crée cette version. Je prends des pixels au hasard et je leurs donne une couleur bleue, verte ou rouge. Je sais que ma façon d'utiliser le hasard n'est pas idéale, il n'était pas forcément nécessaire de sommer de valeurs randoms, je corrige ça dans le programme suivant.
 
@@ -116,7 +116,7 @@ Pour cet exercice et beaucoup des suivant, j'ai utilisés des nombres fixes au l
 ## <ins> Exercice 12 : Cercle </ins> 
 
 **Résultat**
-![image](./Captures/cercle.png)
+![image](./Captures/Cercle.png)
 
 Simple après avoir fait le précédent.
 
@@ -160,7 +160,7 @@ La principale difficulté de cet exercice était de donner les bons types aux va
 L'exercice du tramage a été pour moi ***une grande aventure***. En lisant la documentation je n'ai absolument pas compris l'utilité et le fonctionnement des matrices. Je me suis donc borné à faire un tramage "*maison*" et "*artisanale*". 
 
 **Image originelle**
-![image](./Captures/Voiture.png)
+![image](./Captures/voiture.png)
 
 **Résultat 1**
 ![image](./Captures/Voiture1.png)
