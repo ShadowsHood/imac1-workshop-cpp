@@ -9,27 +9,6 @@ int main()
     int UnSurDeux {};
     // TODO: modifier l'image
 
-   for (int x{0}; x < image.width(); x++)
-    {
-        for (int y{0}; y < image.height(); y++)
-        {   
-            UnSurDeux = random_int(1,3);
-            if (UnSurDeux == 1)
-                { 
-                image.pixel(x,y).r += 0.02;
-                image.pixel(x,y).g += 0.02;
-                image.pixel(x,y).b += 0.02;
-                }
-            if (UnSurDeux == 2)
-                {
-                image.pixel(x,y).r -= 0.02;
-                image.pixel(x,y).g -= 0.02;
-                image.pixel(x,y).b -= 0.02;
-                }
-
-        }
-    }
-
 
     for (int x{0}; x < image.width(); x++)
     {

@@ -1,7 +1,7 @@
 #include <sil/sil.hpp>
 
-/* EXO 1 Ne garder que le vert
 
+/*   EXO1
 int main()
 {
     sil::Image image{"images/logo.png"};
@@ -86,7 +86,7 @@ int main()
 
 int main ()
 {
-    sil::Image image{300, 200/};
+    sil::Image image{300, 200};
     // TODO: modifier l'image
  
 for (int x{0}; x < image.width(); x++)
@@ -134,7 +134,7 @@ for (int x{0}; x < image.width(); x++)
 */
 
 
-/* EX0 7 Image bruitée
+/* EX0 7a Image bruitée tricolore
 
 #include "random.hpp"
 
@@ -179,6 +179,43 @@ for (int x{0}; x < image.width(); x++)
 
 */
 
+/* EXO7b image bruitée
+
+
+#include "random.hpp"
+
+int main()
+{
+    set_random_seed(1);
+    sil::Image image{"images/logo.png"};
+    // TODO: modifier l'image
+    int Nombre2 {};
+    float Nombre3 {};
+    float Nombre4 {};
+    float Nombre5 {};
+ 
+for (int x{0}; x < image.width(); x++)
+{
+    for (int y{0}; y < image.height(); y++)
+    {
+        Nombre2 = random_int (0,5);
+        Nombre3 = random_float (0,1);
+        Nombre4 = random_float (0,1);
+        Nombre5 = random_float (0,1);
+        if ( Nombre2 == 3)
+    {
+        image.pixel(x, y).r = Nombre3;
+        image.pixel(x, y).g = Nombre4;
+        image.pixel(x, y).b = Nombre5;
+    }
+    }
+}
+    image.save("output/pouet.png");
+}
+*/
+
+
+
 
 /* EXO8 Rotation de 90°
 
@@ -206,7 +243,6 @@ for (int x{0}; x < image3.width(); x++)
 
 
 /* EXO9 RGB Split
-
 
 
 int main ()
@@ -281,7 +317,7 @@ int main ()
 }
 */
 
-/*  EXO 10 Luminosité - Eclaircire    
+/* EXO 10 Luminosité - Assombrir 
 #include <math.h>
 int main ()
 {
@@ -293,13 +329,13 @@ int main ()
      for (glm::vec3& color : image.pixels())
 {
     color.r = sqrt(color.r);
-    color.b *= sqrt(color.b);
-    color.g *= sqrt(color.g);
+    color.b = sqrt(color.b);
+    color.g = sqrt(color.g);
 }
     image.save("output/pouet.png");
 }
-*/
 
+*/ 
 
 
 
@@ -507,8 +543,8 @@ for (int x2{0}; x2 <image3.width(); x2 += 300 )
 
 
 
-/* EXO 16 Glitch
 
+/* EXO 16 Glitch 
 #include "random.hpp"
 
 int main()
@@ -547,8 +583,44 @@ int main()
 
 */
 
+/* EXO 17 Glitch 
+#include "random.hpp"
 
+int main()
+{
+    set_random_seed(3);
+    sil::Image image{"images/logo.png"};
+    sil:: Image image2{"images/logo.png"};
+    // TODO: modifier l'image
+    int Largeur {};
+    int Longueur {};
+    int x {};
+    int y {};
 
+    for (int a {0}; a < 100; a++)
+    {
+        x = random_int (1, 300);
+        y = random_int (2, 345);
+        Largeur = random_int (2, 150);
+        Longueur = random_int (2, 30);
+
+        
+        for (int i {x}; i < Largeur + x; i++)
+            {
+            for (int j{y}; j < Longueur + y; j++)
+                {
+                if ((i+Longueur < 300 ) && (j+Longueur < 345))
+                    { 
+                    image2.pixel(i,j) = image.pixel(i+Longueur, j+Longueur);
+                    }
+                }
+            }
+        
+    }
+    image2.save("output/pouet.png");
+}
+
+*/
 
 
 
@@ -617,7 +689,7 @@ int main ()
 
 
 
-
+/*
 #include "random.hpp"
 int main()
 {
@@ -722,7 +794,7 @@ int main()
 
 image.save("output/pouet.png");
 }
-
+ */
 
 
 
@@ -1444,12 +1516,12 @@ int main()
 
 
 
-/* 
+
 #include "random.hpp"
 int main()
 {
-    sil::Image image{"images/mains.jpg"};
-    sil::Image image2{1500, 1500};
+    sil::Image image{"images/voiture.png"};
+    sil::Image image2{2334, 1540};
     double total {};
     set_random_seed(1);
     int UnSurDeux {};
@@ -1958,4 +2030,3 @@ int main()
     }
     image2.save("output/pouet.png");
 }
-*/
