@@ -138,7 +138,7 @@ Cet exercice m'a prit beaucoup de temps, parce que je faisait sortir mes x et y 
 ## <ins> Exercice 15 : Mosaïque miroir </ins> 
 
 **Résultat**
-![image](./Captures/Mosaïque_miroir.png)
+![image](./Captures/Mosaïque_Miroir.png)
 
 Mon programme créé d'abord les différents images miroirs, puis les place suivant différentes conditions liées au modulo. Par exemple le logo qui est reverse selon une droite verticale ne peut être généré qu'à partir d'un x multiple de 300 qui n'est pas multiple de 600 et un y multiple de 690. Je pense que je n'utilise pas au mieux les conditions, mais le programme est au moins fonctionnel. 
 ## <ins> Exercice 16 : Glitch </ins> 
