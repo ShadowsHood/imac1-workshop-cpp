@@ -64,7 +64,7 @@ Sans commentaire
 **Résultat**
 ![image](./Captures/Miroir.png)
 
-J'ai tout de suite pensé à utiliser une copie de l'image originelle afin d'éviter que l'image ne fasse le miroir du miroir du miroir du miroir. On intervertit donc les pixels de l'image 1 avec les pixels de la copie du logo qu'on parcoure dans le sens inverse. Mais j'ai eu besoin de ton aide pour bien faire fonctionner la boucle : les x vont de 0 à 300, il faut donc retirer 1 à la width pour que ça fonctionne.
+J'ai tout de suite penser à utiliser une copie de l'image originelle afin d'éviter que l'image ne fasse le miroir du miroir du miroir du miroir. On intervertit donc les pixels de l'image 1 avec les pixels de la copie du logo qu'on parcoure dans le sens inverse. Mais j'ai eu besoin de ton aide pour bien faire fonctionner la boucle : les x vont de 0 à 300, il faut donc retirer 1 à la width pour que ça fonctionne.
 ## <ins> Exercice 7 : Image bruitée </ins> 
 
 **Résultat 1 : Bruit RGB**
@@ -75,7 +75,7 @@ Elvin m'avait dit que le bruit ne pouvait être que de trois couleurs donc j'ai 
 **Résultat 2 : Bruit Multicolore**
 ![image](./Captures/Bruit.png)
 
-Bruit de toutes les couleurs en randomisant  les valeurs RGB de pixels pris au hasard. Je choisis les pixels à l'aide Nombre2, et nombre3, nombre4, nombre5 donne des float compris entre 0 et 1. 
+Bruit de toutes les couleurs en randomisant les valeurs RGB de pixels pris au hasard. Je choisis les pixels à l'aide de Nombre2,tandis que nombre3, nombre4, et nombre5 donne des float compris entre 0 et 1. 
 ## <ins> Exercice 8 : Rotation de 90° </ins> 
 
 **Résultat**
@@ -111,7 +111,7 @@ Indice très utile. Une fois que l'on implémenté ```math.h```, l'exercice se f
 ![image](./Captures/Disque.png)
 
 J'utilise l'équation du cercle.
-Pour cet exercice et beaucoup des suivant, j'ai utilisés des nombres fixes au lieu de poser des variables. Mon code n'est donc pas facilement modifiable et adaptable car ils n'étaient pas pensés pour être utilisés dans d'autres conditions. C'est un défaut certain, mais l'implémentation de variables me  paraissait vraiment chronophage et effrayante sur certains exercices.
+Pour cet exercice et beaucoup des suivant, j'ai utilisés des nombres fixes au lieu de poser des variables. Mon code n'est donc pas facilement modifiable et adaptable car il n'était pas pensé pour être utilisé dans d'autres conditions. C'est un défaut certain, mais l'implémentation de variables me paraissait vraiment chronophage et effrayante sur certains exercices.
 
 ## <ins> Exercice 12 : Cercle </ins> 
 
@@ -133,7 +133,7 @@ Lors de mes premières tentatives mes pétales se plaçaient dans le coin en bas
 **Résultat**
 ![image](./Captures/Mosaïque.png)
 
-Cet exercice m'a prit beaucoup de temps, parce que je faisait sortir mes x et y des valeurs qu'ils pouvaient vraiment prendre. De plus j'utilisais 2 boucles for de plus qui étaient inutiles et rendaient mon programme très très lent. Dans les faits j'utilise une image 5 fois plus grande que le logo, je déplaces mon x2 et mon y2 avec un pas respectivement égal à la largeur et la longueur du logo. A partir de ces points, je reproduis le logo.  
+Cet exercice m'a prit beaucoup de temps, parce que je faisait sortir mes x et y des valeurs qu'ils pouvaient vraiment prendre. De plus j'utilisais 2 boucles ```for``` de trop qui étaient inutiles et rendaient mon programme très très lent. Dans les faits j'utilise une image 5 fois plus grande que le logo, je déplaces mon x2 et mon y2 avec un pas respectivement égal à la largeur et la longueur du logo. A partir de ces points, je reproduis le logo.  
 
 ## <ins> Exercice 15 : Mosaïque miroir </ins> 
 
@@ -146,14 +146,14 @@ Mon programme créé d'abord les différents images miroirs, puis les place suiv
 **Résultat**
 ![image](./Captures/Glitch.png)
 
-Je randomise la taille des rectangles qui vont créer que l'effet ainsi que le point de départ de ces rectangle. 
-J'ai encore eu des problèmes avec les bords de l'image. Mais je suis très satisfait du résultat, ça ressemble plus à l'idée que je me fait d'une image glitchée que l'exemple proposé. 
+Je randomise la taille des rectangles qui vont créer l'effet glitché ainsi que le point de départ de ces rectangle. 
+J'ai encore eu des problèmes avec les bords de l'image. Mais je suis très satisfait du résultat qui ressemble plus à l'idée que je me fait d'une image glitchée que l'exemple proposé. 
 ## <ins> Exercice 17 : Fractale de Mandelbrot </ins> 
 
 **Résultat**
 ![image](./Captures/fractale.png)
 
-La principale difficulté de cet exercice était de donner les bons types aux variables que j'utilise (utiliser le static_cast). La seconde difficulté était de partir d'un intervalle, de le convertir en [0,4] puis en [-2,2] pour tester les complexes qui sont dans la fractale puis revenir à l'intervalle originale pour faire apparaître la fractale. Mon programme ne fonctionnait pas pendant un long moment malgré que les idées soient bonnes, **c'est très frustrant !**
+La principale difficulté de cet exercice était de donner les bons types aux variables que j'utilise (utiliser le ```static_cast```). La seconde difficulté était de partir d'un intervalle, de le convertir en [0,4] puis en [-2,2] pour tester les complexes qui sont dans la fractale puis revenir tout premier intervalle pour faire apparaître la fractale. Mon programme ne fonctionnait pas pendant un long moment malgré que les idées soient bonnes, **c'est très frustrant !**
 
 ## <ins> Exercice 18 : Tramage </ins> 
 
@@ -170,12 +170,12 @@ Mon premier programme reprend les techniques abordées dans le début de l'artic
 **Résultat 2**
 ![image](./Captures/Voiture2.png)
 
-Pour ne pas avoir se problème de cannibalisme entre mes condition, j'ai décidé d'utiliser random. Le résultat est plus convainquant mais l'image revêt un côté trop bruité. Et les teintes de gris manquent encore de finesse et de profondeurs et tendent trop vers le noir. On perd tous les détails dans les reliefs de la montagne.
+Pour ne pas avoir se problème de cannibalisme entre mes condition, j'ai décidé d'utiliser ```random```. Le résultat est plus convainquant mais l'image revêt un côté trop bruité. Et les teintes de gris manquent encore de finesse et de profondeurs et tendent trop vers le noir. On perd tous les détails dans les reliefs de la montagne.
 
 **Résultat 3**
 ![image](./Captures/Voiture3.png)
 
-Pour obtenir ce résultat j'ai segmenté la lightness en une trentaines de couches afin d'avoir plus de détails dans les sombres et les clairs. Je suis content d'avoir pensé à utiliser des || dans les conditions pour avoir plus de teintes de lumières et éviter les cannibalismes. Néanmoins, certains paternes géométriques sont pour moi trop visibles.
+Pour obtenir ce résultat j'ai segmenté la lightness en une trentaines de couches afin d'avoir plus de détails dans les sombres et les clairs. Je suis content d'avoir pensé à utiliser des ```||``` dans les conditions pour avoir plus de teintes de lumières et éviter les cannibalismes. Néanmoins, certains paternes géométriques sont pour moi trop visibles.
 
 **Résultat 4 : Tramage artisanale**
 ![image](./Captures/Voiture4.png)
