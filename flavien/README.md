@@ -18,7 +18,7 @@
   - [ Exercice 14 : Mosaïque ](#-exercice-14--mosaïque-)
   - [ Exercice 15 : Mosaïque miroir ](#-exercice-15--mosaïque-miroir-)
   - [ Exercice 16 : Glitch ](#-exercice-16--glitch-)
-  - [ Exercice 17 : Fractale de Mancelbrot ](#-exercice-17--fractale-de-mancelbrot-)
+  - [ Exercice 17 : Fractale de Mandelbrot ](#-exercice-17--fractale-de-mandelbrot-)
   - [ Exercice 18 : Tramage ](#-exercice-18--tramage-)
 
 **Logo originel**
@@ -148,7 +148,7 @@ Mon programme créé d'abord les différents images miroirs, puis les place suiv
 
 Je randomise la taille des rectangles qui vont créer que l'effet ainsi que le point de départ de ces rectangle. 
 J'ai encore eu des problèmes avec les bords de l'image. Mais je suis très satisfait du résultat, ça ressemble plus à l'idée que je me fait d'une image glitchée que l'exemple proposé. 
-## <ins> Exercice 17 : Fractale de Mancelbrot </ins> 
+## <ins> Exercice 17 : Fractale de Mandelbrot </ins> 
 
 **Résultat**
 ![image](./Captures/fractale.png)
