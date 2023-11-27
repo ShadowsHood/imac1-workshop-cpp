@@ -44,9 +44,8 @@ On se base ici sur un parcours direct de tous les pixels de l'image en sélectio
 
 ![image](./rapport/vert.png)
 
-<details><summary style="color:indigo">Fonction de parcours des pixels</summary>
-
-```cpp
+<details><summary>Fonction de parcours des pixels</summary> <!-- C'est une mauvaise idée de forcer une couleur, parce que chez moi je suis en thème sombre et ton indigo ressort très mal : https://github-production-user-asset-6210df.s3.amazonaws.com/45451201/285867020-3ec8376c-3efa-48d2-b35a-6420f420039a.png -->
+```cpp <!-- Il faut sauter une ligne avant cette ligne, sinon quand du html est suivi par de la syntaxe markdown la plupart des previews n'arrivent pas à gérer correctement la syntaxe markdown -->
 for (glm::vec3& color : image.pixels()) { }
 ```
 </details>
@@ -169,7 +168,7 @@ imageOut.pixel(x, y) = image.pixel(y,(image.height()-1)-x);
 </details>
 
 ---
-## 🚥 RGB split (⭐⭐)
+## 🚥 RGB split (⭐⭐)<!-- Très bien trouvé l'emoji  -->
 ![image](./rapport/split.png)
 
 Ici, on garde la couleur verte au bon endroit lors de la recopie des pixels sur une nouvelle image de la même taille.
@@ -429,11 +428,11 @@ Voici le résultat pour 3 couleurs :
 
 |![image](./rapport/kmeans.png)|![image](./rapport/kmeans-2.png)|
 |:-:|:-:|
-|3 couleurs|400 couleurs|
+|3 couleurs|400 couleurs| <!-- C'est là aussi où on voit la diff entre ton algo et le k-means original. Normalement avec environ 20 couleurs k-means produit un résultat très fidèle à l'original, là où toi avec 400 tu en es encore loin -->
 
-Le problème ici est que certaines couleurs peuvent être très proches mais pourtant différentes ; ce qui mène à une colorisation non pas pas les teintes dominantes d'une image mais par les couleurs précises les plus présentes. 
+Le problème ici est que certaines couleurs peuvent être très proches mais pourtant différentes ; ce qui mène à une colorisation non pas pas les teintes dominantes d'une image mais par les couleurs précises les plus présentes.
 
-> On pourrait ainsi ajouter une marge autour d'une même couleur afin d'éviter de sélectionner des couleurs trop proches et également passer toutes les couleurs en HSL afin de travailler en teinte directement.
+> On pourrait ainsi ajouter une marge autour d'une même couleur afin d'éviter de sélectionner des couleurs trop proches et également passer toutes les couleurs en HSL afin de travailler en teinte directement. <!-- C'est une bonne idée de passer en HSL et utiliser la teinte pour avoir une meilleure idée de la proximité entre couleurs. On peut même faire encore mieux, et utiliser un espace de couleur qui a été spécialement conçu pour mesurer la similarité entre les couleurs : [Cielab](https://en.wikipedia.org/wiki/CIELAB_color_space), ou sa version plus récente et améliorée : [Oklab](https://bottosson.github.io/posts/oklab/) -->
 
 Le problème des teintes différentes subsisterait tout de même malgré cet ajustement du programme. J'ai donc réalisé à la suite du workshop en peu de temps un programme, à l'aide d'outils génératif et de documentation en ligne, me permettant de mieux comprendre les k-means et ainsi arriver à un bon résultat. 🥳
 

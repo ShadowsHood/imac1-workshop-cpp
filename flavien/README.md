@@ -113,8 +113,7 @@ Indice très utile. Une fois que l'on implémenté ```math.h```, l'exercice se f
 ![image](./Captures/Disque.png)
 
 J'utilise l'équation du cercle.
-Pour cet exercice et beaucoup des suivant, j'ai utilisés des nombres fixes au lieu de poser des variables. Mon code n'est donc pas facilement modifiable et adaptable car il n'était pas pensé pour être utilisé dans d'autres conditions. C'est un défaut certain, mais l'implémentation de variables me paraissait vraiment chronophage et effrayante sur certains exercices.
-
+Pour cet exercice et beaucoup des suivant, j'ai utilisés des nombres fixes au lieu de poser des variables. Mon code n'est donc pas facilement modifiable et adaptable car il n'était pas pensé pour être utilisé dans d'autres conditions. C'est un défaut certain, mais l'implémentation de variables me paraissait vraiment chronophage et effrayante sur certains exercices. <!-- J'entend. Ceci dit, essaye de prendre l'habitude dans tes futurs exercices. Plus tu auras l'habitude, moins ça sera "chronophage". -->
 ## <ins> Exercice 12 : Cercle </ins> 
 
 **Résultat**
@@ -149,7 +148,7 @@ Mon programme créé d'abord les différents images miroirs, puis les place suiv
 ![image](./Captures/Glitch.png)
 
 Je randomise la taille des rectangles qui vont créer l'effet glitché ainsi que le point de départ de ces rectangle. 
-J'ai encore eu des problèmes avec les bords de l'image. Mais je suis très satisfait du résultat qui ressemble plus à l'idée que je me fait d'une image glitchée que l'exemple proposé. 
+J'ai encore eu des problèmes avec les bords de l'image. Mais je suis très satisfait du résultat qui ressemble plus à l'idée que je me fait d'une image glitchée que l'exemple proposé. <!-- En effet, moi aussi j'aime beaucoup ta version -->
 ## <ins> Exercice 17 : Fractale de Mandelbrot </ins> 
 
 **Résultat**
@@ -165,7 +164,7 @@ L'exercice du tramage a été pour moi ***une grande aventure***. En lisant la d
 ![image](./Captures/voiture.png)
 
 **Résultat 1**
-![image](./Captures/Voiture1.png)
+![image](./Captures/Voiture1.png) <!-- Stylé ! -->
 
 Mon premier programme reprend les techniques abordées dans le début de l'article. Mais l'image était trop contrasté à mon gout (les noirs sont trop profonds). De plus, je voulais créer des paternes de points pour le tramage mais mes conditions se "*mangeait*" les unes les autres.
 

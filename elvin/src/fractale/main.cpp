@@ -7,7 +7,7 @@
 #include <complex>
 
                 // Convertir RGB en HSL
-                glm::vec3 rgbToHsl(const glm::vec3& rgb) {
+                glm::vec3 rgbToHsl(const glm::vec3& rgb) { // Plutôt que de copier-coller ta fonction rgbToHsl dans chaque exo qui en a besoin, tu aurais pu le faire une fois pour toute dans un fichier rgbToHsl à part (un .cpp et un .hpp), et include le .hpp dans tous les exos qui en ont besoin
                     float minVal = std::min(std::min(rgb.r, rgb.g), rgb.b);
                     float maxVal = std::max(std::max(rgb.r, rgb.g), rgb.b);
                     float delta = maxVal - minVal;
