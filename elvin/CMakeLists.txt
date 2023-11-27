@@ -80,6 +80,8 @@ add_exercise(tri-random-hue)
 add_exercise(kmeans)
 add_exercise(kmeans-gpt)
 
+add_exercise(generateur-de-tri)
+
 # Crée une cible personnalisée pour exécuter tous les exécutables
 add_executable(build_all src/dummy.cpp)
 

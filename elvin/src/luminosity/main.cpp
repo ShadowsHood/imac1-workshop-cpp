@@ -17,6 +17,7 @@ int main()
             color.g = sqrtf(color.g);
             color.b = sqrtf(color.b);
         }
+        image.save("final/luminosity-light.png");
     } else {
         for (glm::vec3& color : image.pixels())
         {
@@ -24,8 +25,9 @@ int main()
             color.g *= color.g;
             color.b *= color.b;
         }
+        image.save("final/luminosity-dark.png");
     }
 
     image.save("output/pouet.png");
-    image.save("final/luminosity.png");
+    // image.save("final/luminosity.png");
 }

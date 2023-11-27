@@ -102,6 +102,7 @@ int main()
                     // image.pixel(x, y) = glm::vec3{iterations/maxIterationsTest};
                     // image.pixel(x, y).r = iterations/maxIterationsTest;  
                     image.pixel(x, y) = hslToRgb(glm::vec3{x/width, 1.f, iterations/maxIterationsTest});
+                    // image.pixel(x, y) = hslToRgb(glm::vec3{iterations/(maxIterationsTest/1.5), 1.f, iterations/maxIterationsTest});
                     break;
                 }
             }

@@ -80,7 +80,7 @@ int main()
 
     sil::Image image{"images/photo.jpg"};
 
-    int color_number = 1600;
+    int color_number = 3;
 
     std::vector<glm::vec3> most_freq_values = mostFrequentValues(image.pixels(), color_number);
 
@@ -92,5 +92,5 @@ int main()
 
 
     image.save("output/pouet.png");
-    // image.save("final/kmeans.png");
+    image.save("final/kmeans.png");
 }

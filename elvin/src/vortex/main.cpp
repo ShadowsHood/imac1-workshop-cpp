@@ -40,5 +40,5 @@ int main()
     }
 
     imageOut.save("output/pouet.png");
-    image.save("final/vortex.png");
+    imageOut.save("final/vortex.png");
 }
