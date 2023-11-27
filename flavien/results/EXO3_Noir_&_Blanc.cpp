@@ -7,8 +7,7 @@ int main()
  
     for (glm::vec3& color : image.pixels())
 {
-    float total {};
-    total = (color.r + color.b + color.g) / 3;
+    float total { (color.r + color.b + color.g) / 3 }; // Au lieu de créer ta variable puis de l'initialiser à la ligne d'après, tu peux faire les deux en un
     color.r = total;
     color.b = total;
     color.g = total;

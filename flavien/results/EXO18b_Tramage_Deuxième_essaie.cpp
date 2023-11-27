@@ -4,7 +4,7 @@ int main()
 {
     sil::Image image{"images/mains.jpg"};
     set_random_seed(1);
-    int UnSurNeuf {};
+    int UnSurNeuf {};// C'est une mauvaise pratique de créer des variables trop tôt, on préfère les créer au moment où on en a besoin. Ca permet de ne pas se surcharger d'info avec des variables qui ne servent pas encore, et aussi s'assurer si on réutilise la variable la variable entre plusieurs itérations d'une boucle, ça garantit qu'on n'oublie pas de reset / recalculer la variable
     int UnSurHuit {};
     int UnSurSept {};
     int UnSurVingtCinq {};
