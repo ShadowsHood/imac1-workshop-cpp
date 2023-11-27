@@ -34,7 +34,7 @@ Ce README sert de rapport de résultat pour chacun des exercices réalisés
     - [🌀 Vortex](#-vortex)
     - [🧶Tris](#tris)
       - [♻Tris diverses](#tris-diverses)
-      - [🤩 Tris aléatoires par le programme global](#-tris-aléatoires-par-le-programme-global)
+      - [🤩 Exemples de tris aléatoires par le programme global](#-exemples-de-tris-aléatoires-par-le-programme-global)
 
 
 ---
@@ -214,7 +214,7 @@ De cette manière on peut créer un seul programme demandant à l'utilisateur qu
 
 ---
 ## ⚫Disque (⭐⭐)
-![image](./rapport/disque.png)
+![image](./rapport/disk.png)
 Pour cet exercice on a besoin de la formule de l'équation d'un disque :
 $$
 (X-Xcentre)^2 + (Y-Ycentre)^2 = Rayon^2
@@ -471,7 +471,7 @@ Le problème des teintes différentes subsisterait tout de même malgré cet aju
 |![image](./rapport/tri-double.png)|![image](./rapport/tri-brightness-vertical.png)||
 |Tri double|Tri vertical luminosité||
 
-#### 🤩 Tris aléatoires par le programme global
+#### 🤩 Exemples de tris aléatoires par le programme global
 |![image](./rapport/tris/tri0.png)|![image](./rapport/tris/tri2.png)|![image](./rapport/tris/tri3.png)|
 |:-:|:-:|:-:|
 |![image](./rapport/tris/tri5.png)|![image](./rapport/tris/tri7.png)|![image](./rapport/tris/tri10.png)|
